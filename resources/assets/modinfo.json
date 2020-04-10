@@ -1,0 +1,13 @@
+{
+    "type": "code",
+    "name": "BiggerDoors",
+    "modid": "biggerdoors",
+    "version": "0.1.1",
+
+    "description": "More door sizes and varieties",
+    "website": "https://github.com/lashtear/BiggerDoors",
+    "authors": ["Chime"],
+    "dependencies": {
+        "game": "1.12.13"
+    }
+}
