@@ -1,0 +1,15 @@
+{
+	"blockmaterial": "wood",
+    "behaviors": [
+        {"name": "Lockable" }, 
+        {"name": "HorizontalOrientable"}
+    ],
+    "renderpass": "OpaqueNoCull",
+    "class": "BiggerDoorBlock",
+    "variantgroups": [
+		{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" },
+		{ "code": "part", "states": ["down", "up"] },
+		{ "code": "state", "states": ["closed", "opened"] },
+		{ "code": "hinge", "states": ["left", "right"] }		
+	]
+}
