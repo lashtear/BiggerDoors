@@ -12,4 +12,5 @@
     * Saloon doors
     * Curtains
     * Window shutters
+    * Garage door (thanks Cake)
 * Speakeasy slot

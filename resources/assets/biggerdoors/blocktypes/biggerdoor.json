@@ -1,15 +1,95 @@
 {
-	"blockmaterial": "wood",
+    "code": "biggerdoor",
+    "class": "BiggerDoorBlock",
+    "blockmaterial": "Wood",
+    "replaceable": 500,
+    "resistance": 3.5,
+    "lightAbsorption": 0,
+    "sidesolid": {
+        "all": false
+    },
+    "sideopaque": {
+        "all": false
+    },
     "behaviors": [
-        {"name": "Lockable" }, 
-        {"name": "HorizontalOrientable"}
+        {
+            "name": "Lockable"
+        }
     ],
     "renderpass": "OpaqueNoCull",
-    "class": "BiggerDoorBlock",
     "variantgroups": [
-		{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" },
-		{ "code": "part", "states": ["down", "up"] },
-		{ "code": "state", "states": ["closed", "opened"] },
-		{ "code": "hinge", "states": ["left", "right"] }		
-	]
+        {
+            "code": "opensToward",
+            "states": [
+                "down",
+                "up",
+                "north",
+                "east",
+                "south",
+                "west"
+            ]
+        },
+        {
+            "code": "pathToRoot",
+            "states": [
+                "down",
+                "up",
+                "north",
+                "east",
+                "south",
+                "west",
+                "root"
+            ]
+        },
+        {
+            "code": "mechanism",
+            "states": [
+                "hinge",
+                "extension",
+                "openedextension"
+            ]
+        },
+        {
+            "code": "state",
+            "states": [
+                "closed",
+                "opened"
+            ]
+        },
+        {
+            "code": "wood",
+            "loadFromProperties": "block/woodwithaged"
+        }
+    ],
+    "shape": {
+        "base": "block/basic/cube"
+    },
+    "drawtype": "cube",
+    "textures": {
+        "all": {
+            "base": "block/wood/planks/{wood}*"
+        }
+    },
+    "sounds": {
+        "hit": "block/planks",
+        "break": "block/planks",
+        "place": "block/planks",
+        "walk": "walk/wood"
+    },
+    "combustibleProps": {
+        "burnTemperature": 600,
+        "burnDuration": 10
+    },
+    "maxStackSize": 32,
+    "materialDensity": 600,
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "creativeinventory": {
+        "general": [
+            "*"
+        ],
+        "construction": [
+            "*"
+        ]
+    }
 }
