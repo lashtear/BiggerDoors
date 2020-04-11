@@ -11,6 +11,9 @@
     "sideopaque": {
         "all": false
     },
+    "sideao": {
+        "all": true
+    },
     "behaviors": [
         {
             "name": "Lockable"
@@ -65,15 +68,14 @@
             "loadFromProperties": "block/wood"
         }
     ],
+    "drawtype": "json",
     "shape": {
-        "base": "game:block/basic/cube"
+        "base": "door_hinge_left"
     },
-    "drawtype": "cube",
-    "textures": {
-        "all": {
-            "base": "game:block/wood/planks/{wood}*"
-        }
-    },
+	"textures": {
+		"hinge": {"base": "game:block/metal/sheet/brass*"},
+		"wood": {"base": "game:block/wood/planks/{wood}*"},
+	},
     "sounds": {
         "hit": "game:block/planks",
         "break": "game:block/planks",
@@ -90,7 +92,7 @@
     "heldTpUseAnimation": "twohandplaceblock",
     "creativeinventory": {
         "decorative": [
-            "*-east-root-hinge-closed-*"
+            "*-north-root-*-closed-*"
         ]
     }
 }
