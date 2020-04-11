@@ -21,23 +21,23 @@
         {
             "code": "opensToward",
             "states": [
-                "down",
-                "up",
                 "north",
                 "east",
                 "south",
-                "west"
+                "west",
+                "up",
+                "down"
             ]
         },
         {
             "code": "pathToRoot",
             "states": [
-                "down",
-                "up",
                 "north",
                 "east",
                 "south",
                 "west",
+                "up",
+                "down",
                 "root"
             ]
         },
@@ -58,23 +58,27 @@
         },
         {
             "code": "wood",
-            "loadFromProperties": "block/woodwithaged"
+            "states": [
+                "aged",
+                "bamboo"
+            ],
+            "loadFromProperties": "block/wood"
         }
     ],
     "shape": {
-        "base": "block/basic/cube"
+        "base": "game:block/basic/cube"
     },
     "drawtype": "cube",
     "textures": {
         "all": {
-            "base": "block/wood/planks/{wood}*"
+            "base": "game:block/wood/planks/{wood}*"
         }
     },
     "sounds": {
-        "hit": "block/planks",
-        "break": "block/planks",
-        "place": "block/planks",
-        "walk": "walk/wood"
+        "hit": "game:block/planks",
+        "break": "game:block/planks",
+        "place": "game:block/planks",
+        "walk": "game:walk/wood"
     },
     "combustibleProps": {
         "burnTemperature": 600,
@@ -85,11 +89,8 @@
     "heldTpIdleAnimation": "holdbothhandslarge",
     "heldTpUseAnimation": "twohandplaceblock",
     "creativeinventory": {
-        "general": [
-            "*"
-        ],
-        "construction": [
-            "*"
+        "decorative": [
+            "*-east-root-hinge-closed-*"
         ]
     }
 }
